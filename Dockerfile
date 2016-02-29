@@ -5,4 +5,4 @@ VOLUME /jmeter
 RUN apt-get update -qq && apt-get upgrade -y
 RUN apt-get install -y jmeter
 
-ENTRYPOINT jmeter
+ENTRYPOINT ["/usr/bin/jmeter", "--nongui"]
